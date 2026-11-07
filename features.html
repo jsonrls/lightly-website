@@ -8,33 +8,38 @@
 <meta property="og:title" content="Features | Lightly">
 <meta property="og:description" content="What Lightly does: hourly cleaning, live rings for disk, memory, CPU and battery, a full history, and Dusty, an on-device assistant.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f6f8f8">
+<meta name="theme-color" content="#2f6bff">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/theme.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="sky">
 <header class="bar">
   <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
   <nav aria-label="Main"><ul><li><a href="features.html" aria-current="page">Features</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
-  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
-  <a class="button" href="download.html">Download</a>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://www.buymeacoffee.com/jsonrls">Buy me a coffee</a></li></ul></details>
+  <div class="bmc"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jsonrls" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script></div>
+  <a class="button dark" href="download.html">Download</a>
 </header>
-<main id="main">
-<header class="page-head">
+<header class="page-head" id="main">
+  <p class="pill on-blue"><span class="dot"></span>Features</p>
   <h1 class="line">Clean <img src="assets/shots/slot-disk.webp" alt="The disk ring, 412.7 GB free" width="568" height="156" class="slot" fetchpriority="high" decoding="async"> on the hour.</h1>
   <p class="lead intro">Lightly is built to be forgotten. It cleans on a timer, shows you what happened, and keeps quiet the rest of the time.</p>
 </header>
+</div>
+<main>
 
 <section class="band field">
   <div class="pair" data-rise>
     <div class="pair-text">
-      <h2>It cleans by itself</h2>
+      <h2>It cleans <em>by itself</em></h2>
       <p class="lead">Every hour by default, day and night. Choose 3, 6 or 12 hours, or once a day, if you like it slower.</p>
       <ul class="facts two">
         <li><h3>Catches up</h3><p class="quiet">If your Mac slept through a clean, it runs at the next wake.</p></li>
@@ -50,7 +55,7 @@
 <section class="section">
   <div class="pair" data-rise>
     <div class="pair-text">
-      <h2>It shows its work</h2>
+      <h2>It shows <em>its work</em></h2>
       <p>Click the ring in the menu bar for four live gauges and the last clean. Open the full view for bigger rings, the clean by category, this month’s total and a paged history of every run.</p>
       <p>Disk, memory and CPU turn from green to orange at 60% and to red at 85%, so a glance is enough.</p>
     </div>
@@ -59,7 +64,7 @@
 </section>
 
 <section class="section">
-  <h2>What you get in the window</h2>
+  <h2>What you get in <em>the window</em></h2>
   <div class="axis-row" style="margin-top:clamp(40px,5vw,72px)" data-rise>
     <div class="axis-side"><h3>The last clean</h3><p class="quiet" style="margin-top:10px">Date, total, and bytes freed for each of the six categories.</p></div>
     <img src="assets/shots/last-clean-light.webp" alt="The last clean, 6.72 GB, by category" width="850" height="367" class="shot tile axis-wide panel" loading="lazy" decoding="async">
@@ -73,7 +78,7 @@
 <section class="band tone">
   <div class="pair flip" data-rise>
     <div class="pair-text">
-      <h2>Settings fit one window</h2>
+      <h2>Settings fit <em>one window</em></h2>
       <p>Open at login. Use Apple Intelligence. How often to clean. A switch for each category. An Always kept list. Full Disk Access status. That is all of them.</p>
       <a class="link" href="safety.html">How Always kept works</a>
     </div>
@@ -84,7 +89,7 @@
 <section class="section">
   <div class="pair" data-rise>
     <div class="pair-text">
-      <h2>Dusty, on your Mac</h2>
+      <h2>Dusty, on <em>your Mac</em></h2>
       <p>Dusty turns each clean into a plain sentence and answers questions about your disk. It runs on Apple Intelligence, so the conversation never leaves the machine.</p>
       <a class="link" href="dusty.html">Meet Dusty</a>
     </div>
@@ -92,12 +97,10 @@
   </div>
 </section>
 
-<section class="close field">
-  <h2>Press once.<br>Then never.</h2>
-  <div class="close-row">
-    <p>Free and open source, for macOS 27 on Apple Silicon.</p>
-    <div><a class="button" href="download.html">Download for Mac</a></div>
-  </div>
+<section class="close-sky" aria-labelledby="close-title">
+  <h2 id="close-title">Press once. Then <em>never</em>.</h2>
+  <p>Free and open source, for macOS 27 on Apple Silicon.</p>
+  <div class="close-act"><a class="button light" href="download.html">Download for Mac</a><a class="link" href="https://github.com/jsonrls/lightly">Source on GitHub</a></div>
 </section>
 </main>
 <footer class="footer">
