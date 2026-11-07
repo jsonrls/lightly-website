@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety | Lightly</title>
+<meta name="description" content="Lightly deletes for real, so it is built around refusing. See what it never touches, and check any path yourself.">
+<meta property="og:title" content="Safety | Lightly">
+<meta property="og:description" content="Lightly deletes for real, so it is built around refusing. See what it never touches, and check any path yourself.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f8f8">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
+  <nav aria-label="Main"><ul><li><a href="features.html">Features</a></li><li><a href="safety.html" aria-current="page">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
+  <a class="button" href="download.html">Download</a>
+</header>
+<main id="main">
+<header class="page-head">
+  <h1 class="line">Everything <img src="assets/shots/slot-kept.webp" alt="The Always kept list" width="616" height="158" class="slot" fetchpriority="high" decoding="async"> else stays.</h1>
+  <p class="lead intro">Lightly really deletes files, by itself. So most of its code is about what it refuses to do.</p>
+</header>
+
+<section class="warning" style="margin-top:clamp(48px,6vw,88px)">
+  <h2 class="lead">Cleaning is permanent and needs no confirmation.</h2>
+  <p>Only app leftovers pass through the Trash first. Read <a class="link" href="cleans.html">what it cleans</a> before you install. The software comes with no warranty.</p>
+</section>
+
+<section class="section" aria-labelledby="ask-title">
+  <div class="ask-head" data-rise>
+    <h2 id="ask-title">Would Lightly touch it?</h2>
+    <p class="lead">Type any path from your Mac and read the rule that applies.</p>
+  </div>
+  <form class="ask" data-ask>
+    <label class="sr" for="ask-path">A path on your Mac</label>
+    <input class="ask-input" id="ask-path" data-ui value="~/Documents/taxes-2026.pdf" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+    <div class="ask-answer" aria-live="polite">
+      <p class="ask-word">Never.</p>
+      <p class="ask-why">That is inside Documents, which is on the list Lightly refuses, whatever else happens.</p>
+    </div>
+    <div class="ask-try">
+      <button class="chip" type="button">~/Library/Caches/com.spotify.client</button>
+      <button class="chip" type="button">~/Library/Logs/Zoom/zoom.log</button>
+      <button class="chip" type="button">~/.Trash/old-invoice.pdf</button>
+      <button class="chip" type="button">/Volumes/Backup/Photos</button>
+    </div>
+  </form>
+</section>
+
+<section class="band tone">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>One door for every deletion</h2>
+      <p>Every file Lightly removes goes through a single piece of code, <code>DeletionGateway</code>. It refuses in five ways, and whatever it refuses stays on disk. The one exception is Docker, which cleans up after itself with its own prune command.</p>
+      <a class="link" href="https://github.com/jsonrls/lightly/blob/main/Sources/CleanerCore/DeletionGateway.swift">Read the gateway’s source</a>
+    </div>
+    <ol class="big-list pair-pic">
+      <li><h3>A link</h3><p>Symbolic links are refused, so a link cannot lead a clean somewhere else.</p></li>
+      <li><h3>Another disk</h3><p>Anything off your startup disk is skipped, even when a folder is redirected there.</p></li>
+      <li><h3>Outside its folders</h3><p>A short list of folders inside your Library, and nowhere else.</p></li>
+      <li><h3>On the deny list</h3><p>Your personal folders, along with any parent folder that would take them with it.</p></li>
+      <li><h3>On your keep list</h3><p>Whatever you add to Always kept, and everything inside it.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band field" style="margin-top:0">
+  <div class="names">
+    <h2>It never touches </h2>
+    <ul>
+      <li>Documents, </li><li>Desktop, </li><li>Downloads, </li><li>Pictures, </li><li>Movies, </li><li>Music, </li><li>Mail, </li><li>Messages, </li><li>iCloud Drive, </li><li>keychains, </li><li>Safari, </li><li>Chrome, </li><li>Firefox, </li><li>Brave, </li><li>Edge, </li><li>Arc, </li><li>Opera, </li><li>app containers, </li><li>system folders, </li><li>external drives.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>See it before it cleans</h2>
+      <p>Build from source and you get a dry run, which lists what a clean would remove and deletes nothing. The app only deletes when it was built with <code>--live</code>.</p>
+      <p>The list lands in <code>~/Library/Application Support/com.maccleaner.app/dry-run.txt</code>.</p>
+    </div>
+    <div class="pair-pic">
+<pre><code>git clone https://github.com/jsonrls/lightly
+cd lightly
+scripts/bundle.sh
+"dist/Lightly.app/Contents/MacOS/MacCleaner" --dry-run-report</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="ask-head"><h2>When in doubt, it keeps</h2><p class="lead">Each of these is a rule in the code, and each one errs on the side of leaving your files alone.</p></div>
+  <ul class="facts">
+    <li><h3>Nothing at first launch</h3><p>The first clean waits one full interval, an hour by default.</p></li>
+    <li><h3>Open apps are skipped</h3><p>A running app keeps its cache, however big it is.</p></li>
+    <li><h3>Unreadable means in use</h3><p>If a folder cannot be read, it counts as recently used and stays.</p></li>
+    <li><h3>A damaged state pauses it</h3><p>If its settings file cannot be read, Lightly starts paused and cleans nothing.</p></li>
+    <li><h3>No admin password</h3><p>It never asks for one, so it cannot reach system folders.</p></li>
+    <li><h3>Dusty cannot delete</h3><p>The assistant has no tools. It only rewords what was measured.</p></li>
+  </ul>
+</section>
+
+<section class="section">
+  <div class="pair flip" data-rise>
+    <div class="pair-text">
+      <h2>Your list wins</h2>
+      <p>Always kept beats every rule in the app. Add a folder once, and no clean will enter it.</p>
+    </div>
+    <img src="assets/shots/kept-light.webp" alt="The Always kept list in Settings" width="774" height="302" class="pair-pic shot tile" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<section class="section">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>Every run is on record</h2>
+      <p>The history shows what each clean freed, so nothing happens out of sight.</p>
+    </div>
+    <img src="assets/shots/history-light.webp" alt="Cleaning history with sizes by run" width="849" height="367" class="pair-pic shot tile panel" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<section class="band tone">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>Each rule has a switch</h2>
+      <p>If you are unsure about a category, turn it off.</p>
+      <a class="link" href="cleans.html">See all six rules</a>
+    </div>
+    <img src="assets/shots/categories-light.webp" alt="Category switches in Settings" width="774" height="560" class="pair-pic shot" loading="lazy" decoding="async">
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-top">
+    <p>Lightly is free and open source. If it saves you some space, you can <a href="https://www.buymeacoffee.com/jsonrls">buy me a coffee</a>.</p>
+    <a href="#main">Back to top</a>
+  </div>
+  <div>
+    <a class="footer-big" href="https://github.com/jsonrls/lightly"><span>github.com/<br>jsonrls/lightly</span></a>
+    <div class="footer-meta">
+      <ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="download.html">Download</a></li></ul>
+      <span>MIT licensed. No warranty.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

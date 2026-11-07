@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ | Lightly</title>
+<meta name="description" content="Answers about what Lightly deletes, whether it can be undone, privacy, Dusty, and installing it on your Mac.">
+<meta property="og:title" content="FAQ | Lightly">
+<meta property="og:description" content="Answers about what Lightly deletes, whether it can be undone, privacy, Dusty, and installing it on your Mac.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f8f8">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does Lightly clean?", "acceptedAnswer": {"@type": "Answer", "text": "App caches, logs older than 7 days, Trash items older than 30 days, leftovers from apps gone for 30 days, weekly developer caches, and Docker’s build cache and dangling images. The full rules are on one page."}}, {"@type": "Question", "name": "How often does it clean?", "acceptedAnswer": {"@type": "Answer", "text": "Every hour by default. You can pick every 3, 6 or 12 hours, or once a day, in Settings."}}, {"@type": "Question", "name": "When does the first clean happen?", "acceptedAnswer": {"@type": "Answer", "text": "One full interval after the first launch, so an hour by default. Nothing is cleaned the moment you open it."}}, {"@type": "Question", "name": "What if my Mac was asleep?", "acceptedAnswer": {"@type": "Answer", "text": "The clean runs at the next wake."}}, {"@type": "Question", "name": "Can I clean right now?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Open the full view and press Clean now. It also runs the weekly developer caches."}}, {"@type": "Question", "name": "Can I pause it?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Turn off Clean automatically in Settings, or press Pause auto-clean in the full view. When you resume, the timer starts again instead of cleaning at once."}}, {"@type": "Question", "name": "Will cleaning caches slow my apps?", "acceptedAnswer": {"@type": "Answer", "text": "An app may take a little longer the first time it opens after a clean, while it rebuilds its cache. Apps that are open are skipped."}}, {"@type": "Question", "name": "How much space will I get back?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your Mac and your apps, so there is no promised figure. Lightly shows the real number after every clean, and a total for the month."}}, {"@type": "Question", "name": "Can I undo a clean?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly no. Cleaning is permanent and needs no confirmation. App leftovers are the exception: they go to the Trash first, so you have time to take them back."}}, {"@type": "Question", "name": "What does it never touch?", "acceptedAnswer": {"@type": "Answer", "text": "External drives, system folders, Documents, Desktop, Downloads, Pictures, Movies, Music, Mail, Messages, iCloud Drive, keychains, app containers, and the profiles of Safari, Chrome, Firefox, Brave, Edge, Arc and Opera."}}, {"@type": "Question", "name": "Can I protect a folder?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Add any file or folder to Always kept in Settings. No clean enters it, whatever the other rules say."}}, {"@type": "Question", "name": "Can I see what a clean would remove first?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you build from source. That build is a dry run: it lists what a clean would remove and deletes nothing. The commands are on the safety page."}}, {"@type": "Question", "name": "Does it need my admin password?", "acceptedAnswer": {"@type": "Answer", "text": "No, never. It works only inside your own user folders."}}, {"@type": "Question", "name": "Why does it want Full Disk Access?", "acceptedAnswer": {"@type": "Answer", "text": "Only to clean the Trash, which macOS protects. Without it, Lightly skips the Trash and everything else works."}}, {"@type": "Question", "name": "Does anything leave my Mac?", "acceptedAnswer": {"@type": "Answer", "text": "No. Lightly has no network code, no account and no analytics. The only web link in the app is View on GitHub in Settings."}}, {"@type": "Question", "name": "What is Dusty?", "acceptedAnswer": {"@type": "Answer", "text": "An assistant in the full view that describes each clean and answers questions about your Mac. It runs on Apple Intelligence, on the Mac itself."}}, {"@type": "Question", "name": "Can Dusty delete things?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dusty has no tools and cannot decide what gets deleted. It only rewords measured facts, and its answers are checked against them."}}, {"@type": "Question", "name": "Is my chat saved?", "acceptedAnswer": {"@type": "Answer", "text": "No. It stays in memory until you quit Lightly."}}, {"@type": "Question", "name": "What if my Mac has no Apple Intelligence?", "acceptedAnswer": {"@type": "Answer", "text": "Dusty is hidden. Cleaning, the rings and the history all work the same."}}, {"@type": "Question", "name": "Which Macs does it run on?", "acceptedAnswer": {"@type": "Answer", "text": "macOS 27 on Apple Silicon."}}, {"@type": "Question", "name": "Why does macOS warn me when I open it?", "acceptedAnswer": {"@type": "Answer", "text": "This build is not notarized by Apple. Go to System Settings, Privacy & Security, and choose Open Anyway."}}, {"@type": "Question", "name": "Is it really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is open source under the MIT license. If it saves you some space, you can buy the author a coffee."}}, {"@type": "Question", "name": "Where do I put the app?", "acceptedAnswer": {"@type": "Answer", "text": "In /Applications, before you first open it. The login item stays tied to where the app first ran."}}, {"@type": "Question", "name": "How do I remove it?", "acceptedAnswer": {"@type": "Answer", "text": "Turn off Open at login, quit from the menu bar window, and delete Lightly.app. Its settings and history are in ~/Library/Application Support/com.maccleaner.app."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
+  <nav aria-label="Main"><ul><li><a href="features.html">Features</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html" aria-current="page">FAQ</a></li></ul></nav>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
+  <a class="button" href="download.html">Download</a>
+</header>
+<main id="main">
+<header class="page-head">
+  <h1>Fair questions.</h1>
+  <p class="lead intro">It deletes files by itself, so you should ask. These are the straight answers.</p>
+</header>
+
+<section class="section">
+  <h2 class="faq-head">Cleaning</h2>
+  <div class="faq-split">
+    <img src="assets/shots/last-clean-light.webp" alt="The last clean by category" width="850" height="367" class="shot faq-pic panel" loading="lazy" decoding="async">
+    <div class="faq-list">
+      <details open><summary>What does Lightly clean?</summary><div class="answer"><p>App caches, logs older than 7 days, Trash items older than 30 days, leftovers from apps gone for 30 days, weekly developer caches, and Docker’s build cache and dangling images. <a class="link" href="cleans.html">The full rules</a> are on one page.</p></div></details>
+      <details><summary>How often does it clean?</summary><div class="answer"><p>Every hour by default. You can pick every 3, 6 or 12 hours, or once a day, in Settings.</p></div></details>
+      <details><summary>When does the first clean happen?</summary><div class="answer"><p>One full interval after the first launch, so an hour by default. Nothing is cleaned the moment you open it.</p></div></details>
+      <details><summary>What if my Mac was asleep?</summary><div class="answer"><p>The clean runs at the next wake.</p></div></details>
+      <details><summary>Can I clean right now?</summary><div class="answer"><p>Yes. Open the full view and press Clean now. It also runs the weekly developer caches.</p></div></details>
+      <details><summary>Can I pause it?</summary><div class="answer"><p>Yes. Turn off Clean automatically in Settings, or press Pause auto-clean in the full view. When you resume, the timer starts again instead of cleaning at once.</p></div></details>
+      <details><summary>Will cleaning caches slow my apps?</summary><div class="answer"><p>An app may take a little longer the first time it opens after a clean, while it rebuilds its cache. Apps that are open are skipped.</p></div></details>
+      <details><summary>How much space will I get back?</summary><div class="answer"><p>It depends on your Mac and your apps, so there is no promised figure. Lightly shows the real number after every clean, and a total for the month.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="faq-head">Safety</h2>
+  <div class="faq-split">
+    <img src="assets/shots/categories-light.webp" alt="Category switches in Settings" width="774" height="560" class="shot faq-pic" loading="lazy" decoding="async">
+    <div class="faq-list">
+      <details open><summary>Can I undo a clean?</summary><div class="answer"><p>Mostly no. Cleaning is permanent and needs no confirmation. App leftovers are the exception: they go to the Trash first, so you have time to take them back.</p></div></details>
+      <details><summary>What does it never touch?</summary><div class="answer"><p>External drives, system folders, Documents, Desktop, Downloads, Pictures, Movies, Music, Mail, Messages, iCloud Drive, keychains, app containers, and the profiles of Safari, Chrome, Firefox, Brave, Edge, Arc and Opera.</p></div></details>
+      <details><summary>Can I protect a folder?</summary><div class="answer"><p>Yes. Add any file or folder to Always kept in Settings. No clean enters it, whatever the other rules say.</p></div></details>
+      <details><summary>Can I see what a clean would remove first?</summary><div class="answer"><p>Yes, if you build from source. That build is a dry run: it lists what a clean would remove and deletes nothing. <a class="link" href="safety.html">The commands</a> are on the safety page.</p></div></details>
+      <details><summary>Does it need my admin password?</summary><div class="answer"><p>No, never. It works only inside your own user folders.</p></div></details>
+      <details><summary>Why does it want Full Disk Access?</summary><div class="answer"><p>Only to clean the Trash, which macOS protects. Without it, Lightly skips the Trash and everything else works.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="faq-head">Privacy and Dusty</h2>
+  <div class="faq-split">
+    <img src="assets/shots/privacy-light.webp" alt="The Use Apple Intelligence switch, on this Mac only" width="752" height="156" class="shot faq-pic" loading="lazy" decoding="async">
+    <div class="faq-list">
+      <details open><summary>Does anything leave my Mac?</summary><div class="answer"><p>No. Lightly has no network code, no account and no analytics. The only web link in the app is View on GitHub in Settings.</p></div></details>
+      <details><summary>What is Dusty?</summary><div class="answer"><p>An assistant in the full view that describes each clean and answers questions about your Mac. It runs on Apple Intelligence, on the Mac itself.</p></div></details>
+      <details><summary>Can Dusty delete things?</summary><div class="answer"><p>No. Dusty has no tools and cannot decide what gets deleted. It only rewords measured facts, and its answers are checked against them.</p></div></details>
+      <details><summary>Is my chat saved?</summary><div class="answer"><p>No. It stays in memory until you quit Lightly.</p></div></details>
+      <details><summary>What if my Mac has no Apple Intelligence?</summary><div class="answer"><p>Dusty is hidden. Cleaning, the rings and the history all work the same.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="faq-head">Installing</h2>
+  <div class="faq-split">
+    <img src="assets/shots/popover-light.webp" alt="The menu bar window" width="792" height="1144" class="shot faq-pic" loading="lazy" decoding="async">
+    <div class="faq-list">
+      <details open><summary>Which Macs does it run on?</summary><div class="answer"><p>macOS 27 on Apple Silicon.</p></div></details>
+      <details><summary>Why does macOS warn me when I open it?</summary><div class="answer"><p>This build is not notarized by Apple. Go to System Settings, Privacy &amp; Security, and choose Open Anyway.</p></div></details>
+      <details><summary>Is it really free?</summary><div class="answer"><p>Yes. It is open source under the MIT license. If it saves you some space, you can <a class="link" href="https://www.buymeacoffee.com/jsonrls">buy the author a coffee</a>.</p></div></details>
+      <details><summary>Where do I put the app?</summary><div class="answer"><p>In <code>/Applications</code>, before you first open it. The login item stays tied to where the app first ran.</p></div></details>
+      <details><summary>How do I remove it?</summary><div class="answer"><p>Turn off Open at login, quit from the menu bar window, and delete <code>Lightly.app</code>. Its settings and history are in <code>~/Library/Application Support/com.maccleaner.app</code>.</p></div></details>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-top">
+    <p>Lightly is free and open source. If it saves you some space, you can <a href="https://www.buymeacoffee.com/jsonrls">buy me a coffee</a>.</p>
+    <a href="#main">Back to top</a>
+  </div>
+  <div>
+    <a class="footer-big" href="https://github.com/jsonrls/lightly"><span>github.com/<br>jsonrls/lightly</span></a>
+    <div class="footer-meta">
+      <ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="download.html">Download</a></li></ul>
+      <span>MIT licensed. No warranty.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

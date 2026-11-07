@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download | Lightly</title>
+<meta name="description" content="Download Lightly 1.0.0 for macOS 27 on Apple Silicon. Free and open source. Read the install steps and the warning first.">
+<meta property="og:title" content="Download | Lightly">
+<meta property="og:description" content="Download Lightly 1.0.0 for macOS 27 on Apple Silicon. Free and open source. Read the install steps and the warning first.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f8f8">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
+  <nav aria-label="Main"><ul><li><a href="features.html">Features</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
+  <a class="button" href="download.html">Download</a>
+</header>
+<main id="main">
+<header class="page-head">
+  <h1 class="line">Press once. <img class="slot" src="assets/icon.svg" alt="The Lightly app icon" width="120" height="120" style="height:1em"> Then never.</h1>
+  <div class="pair head-pair">
+    <div class="pair-text">
+      <p class="lead">Lightly 1.0.0 for macOS 27 on Apple Silicon. Free, MIT licensed, and under a megabyte.</p>
+      <div class="get">
+        <a class="button" href="https://github.com/jsonrls/lightly/releases/download/v1.0.0/Lightly-1.0.0.zip">Download for Mac</a>
+        <a class="link" href="https://github.com/jsonrls/lightly/releases/tag/v1.0.0">Release notes</a>
+      </div>
+    </div>
+    <img src="assets/shots/rings-light.webp" alt="Rings for disk, memory, CPU and battery" width="1760" height="310" class="pair-pic shot tile" fetchpriority="high" decoding="async">
+  </div>
+</header>
+
+<section class="warning" style="margin-top:clamp(48px,6vw,88px)">
+  <h2 class="lead">Lightly permanently deletes files, by itself, with no confirmation.</h2>
+  <p>The first automatic clean runs one hour after first launch, then every hour. Read <a class="link" href="cleans.html">what it cleans</a> and <a class="link" href="safety.html">what it never touches</a> first. The software comes with no warranty.</p>
+</section>
+
+<section class="section">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>Install it</h2>
+      <ol class="steps" style="margin-top:28px">
+        <li>Unzip the download and move <code>Lightly.app</code> to <code>/Applications</code>.</li>
+        <li>Open it. macOS warns you, because this build is not notarized by Apple.</li>
+        <li>Go to System Settings, Privacy &amp; Security, and choose Open Anyway.</li>
+        <li>To clean the Trash too, turn on Full Disk Access for Lightly in the same place.</li>
+      </ol>
+    </div>
+    <img src="assets/shots/popover-light.webp" alt="Lightly's menu bar window after install" width="792" height="1144" class="pair-pic shot tile" style="max-width:min(100%,440px);justify-self:end" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<section class="band field">
+  <div class="ask-head"><h2>What you need</h2><p class="lead quiet">One thing is required. The other two are optional.</p></div>
+  <ul class="facts">
+    <li><h3>macOS 27 on Apple Silicon</h3><p class="quiet">Required for everything.</p></li>
+    <li><h3>Full Disk Access</h3><p class="quiet">Optional. Only for cleaning the Trash.</p></li>
+    <li><h3>Apple Intelligence</h3><p class="quiet">Optional. Only for Dusty. The rest works without it.</p></li>
+  </ul>
+</section>
+
+<section class="section">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>Check the file</h2>
+      <p>Compare the checksum of <code>Lightly-1.0.0.zip</code> with the one here before you open it.</p>
+    </div>
+    <div class="pair-pic">
+<pre><code>shasum -a 256 Lightly-1.0.0.zip
+7460b792eade3d70098ccd35870f3727141f73f0d42a10889da84141dfd10493</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="pair flip" data-rise>
+    <div class="pair-text">
+      <h2>Or build it yourself</h2>
+      <p>A build from source is a dry run, which deletes nothing. Add <code>--live</code> for one that really cleans.</p>
+      <a class="link" href="https://github.com/jsonrls/lightly">Source on GitHub</a>
+    </div>
+    <div class="pair-pic">
+<pre><code>git clone https://github.com/jsonrls/lightly
+cd lightly
+swift test
+scripts/bundle.sh          # dry run
+scripts/bundle.sh --live   # really deletes</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>Once it is running</h2>
+      <p>Look for the small white ring in your menu bar. Click it to see your disk and the last clean. There is no main window and nothing else to do.</p>
+      <a class="link" href="faq.html">Questions</a>
+    </div>
+    <img src="assets/shots/gauges-light.webp" alt="Disk, memory, CPU and battery rings" width="582" height="395" class="pair-pic shot tile" style="max-width:min(100%,520px);justify-self:end" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<section class="band tone">
+  <div class="pair" data-rise>
+    <div class="pair-text">
+      <h2>Set your pace</h2>
+      <p>Every hour is the default. If that feels like a lot, change it in Settings before the first clean.</p>
+    </div>
+    <img src="assets/shots/schedule-light.webp" alt="Interval picker in Settings" width="774" height="190" class="pair-pic shot" loading="lazy" decoding="async">
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-top">
+    <p>Lightly is free and open source. If it saves you some space, you can <a href="https://www.buymeacoffee.com/jsonrls">buy me a coffee</a>.</p>
+    <a href="#main">Back to top</a>
+  </div>
+  <div>
+    <a class="footer-big" href="https://github.com/jsonrls/lightly"><span>github.com/<br>jsonrls/lightly</span></a>
+    <div class="footer-meta">
+      <ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="download.html">Download</a></li></ul>
+      <span>MIT licensed. No warranty.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

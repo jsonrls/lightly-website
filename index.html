@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lightly: the Mac cleaner with nothing to press</title>
+<meta name="description" content="Lightly is a free, open source Mac menu bar app that clears caches, logs and old Trash by itself, every hour.">
+<meta property="og:title" content="Lightly: the Mac cleaner with nothing to press">
+<meta property="og:description" content="Lightly is a free, open source Mac menu bar app that clears caches, logs and old Trash by itself, every hour.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f8f8">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
+  <nav aria-label="Main"><ul><li><a href="features.html">Features</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
+  <a class="button" href="download.html">Download</a>
+</header>
+<main id="main">
+<section class="hero">
+  <h1 class="line">Nothing to <button class="press" type="button" aria-label="press"><img src="assets/shots/clean-now.webp" alt="" width="1079" height="302" fetchpriority="high" decoding="async"></button></h1>
+  <div class="hero-row">
+    <p>Lightly is a free Mac menu bar app that clears caches, logs and old Trash by itself, every hour.</p>
+    <div class="hero-act"><a class="link" href="cleans.html">What it cleans</a><a class="button" href="download.html">Download for Mac</a></div>
+    <p class="press-note quiet" role="status"></p>
+  </div>
+</section>
+<figure class="stage">
+  <div class="stage-bar" data-ui><span class="stage-icon"><img src="assets/menubar.svg" alt="Lightly in the menu bar" width="19" height="19"></span><span>Sat 2:04 PM</span></div>
+  <div class="stage-shots shutter">
+    <img src="assets/shots/full-dark.webp" alt="Lightly's full view with rings for disk, memory, CPU and battery, the last clean by category, the cleaning history and Dusty" width="1992" height="1284" class="stage-full" fetchpriority="high" decoding="async">
+    <img src="assets/shots/popover-dark.webp" alt="Lightly's menu bar window, showing 412.7 GB free and a last clean of 6.72 GB" width="792" height="1144" class="stage-pop" fetchpriority="high" decoding="async">
+  </div>
+</figure>
+
+<section class="section" aria-labelledby="ask-title">
+  <div class="ask-head" data-rise>
+    <h2 id="ask-title">Would Lightly touch it?</h2>
+    <p class="lead">Type any path from your Mac. The answer uses the same rules the app runs on.</p>
+  </div>
+  <form class="ask" data-ask>
+    <label class="sr" for="ask-path">A path on your Mac</label>
+    <input class="ask-input" id="ask-path" data-ui value="~/Documents/taxes-2026.pdf" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+    <div class="ask-answer" aria-live="polite">
+      <p class="ask-word">Never.</p>
+      <p class="ask-why">That is inside Documents, which is on the list Lightly refuses, whatever else happens.</p>
+    </div>
+    <div class="ask-try">
+      <button class="chip" type="button">~/Library/Caches/com.spotify.client</button>
+      <button class="chip" type="button">~/Library/Logs/Zoom/zoom.log</button>
+      <button class="chip" type="button">~/.Trash/old-invoice.pdf</button>
+      <button class="chip" type="button">/Volumes/Backup/Photos</button>
+    </div>
+  </form>
+</section>
+
+<section class="stages" aria-label="What happens in a clean">
+  <div class="stages-text">
+    <div class="stage-copy">
+      <div class="stage-text" data-stage="0"><h2>First, it waits a&nbsp;full hour.</h2><p>Nothing is cleaned at launch. The first clean comes one interval after you open Lightly, so you have time to set it up.</p></div>
+      <div class="stage-text" data-stage="1"><h2>Then it checks what it may clear.</h2><p>Each file goes through one gateway. Open apps, recent files and anything on your own keep list are left alone.</p></div>
+      <div class="stage-text" data-stage="2"><h2>It clears the rest on its own.</h2><p>Caches, old logs, old Trash and whatever deleted apps left behind. No window opens and nothing asks you to confirm.</p></div>
+      <div class="stage-text" data-stage="3"><h2>Then it writes it all down.</h2><p>Every clean is kept by date and size, so you can read what happened whenever you are curious.</p></div>
+    </div>
+  </div>
+  <div class="stages-pics">
+    <img src="assets/shots/schedule-dark.webp" alt="Auto-clean settings, set to clean every hour" width="774" height="190" class="stage-pic shot" data-stage="0" loading="lazy" decoding="async">
+    <img src="assets/shots/categories-dark.webp" alt="The six cleaning categories, each with its own switch" width="774" height="560" class="stage-pic shot" data-stage="1" loading="lazy" decoding="async">
+    <img src="assets/shots/last-clean-dark.webp" alt="The last clean, 6.72 GB, split into six categories" width="850" height="367" class="stage-pic shot panel" data-stage="2" loading="lazy" decoding="async">
+    <img src="assets/shots/history-dark.webp" alt="The cleaning history, one row for each hourly clean" width="849" height="367" class="stage-pic shot panel" data-stage="3" loading="lazy" decoding="async">
+  </div>
+  <div class="stages-control">
+    <div class="range"><label class="sr" for="stage-range">Stage of a clean</label><input id="stage-range" type="range" min="0" max="3" step="1" value="0"></div>
+    <ol class="stage-names"><li>Waits</li><li>Checks</li><li>Clears</li><li>Records</li></ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="axis-head" data-rise><h2>It stays out of sight.</h2></div>
+  <div class="axis-row" data-rise>
+    <div class="axis-text"><h3>No Dock icon, no main window</h3><p>A small white ring in the menu bar is all you see. It opens at login, then runs in the background.</p></div>
+    <img src="assets/shots/gauges-light.webp" alt="Disk, memory, CPU and battery rings in the menu bar window" width="582" height="395" class="axis-pic mid shot tile" loading="lazy" decoding="async">
+  </div>
+  <div class="axis-row" data-rise>
+    <div class="axis-text"><h3>Catches up after sleep</h3><p>If your Mac was asleep on the hour, the clean runs at the next wake. Pause it any time from Settings.</p></div>
+    <img src="assets/shots/schedule-light.webp" alt="Clean automatically switch and interval picker" width="774" height="190" class="axis-pic wide shot tile" loading="lazy" decoding="async">
+  </div>
+  <div class="axis-row" data-rise>
+    <div class="axis-text"><h3>Dusty explains the rest</h3><p>Ask what is using your disk. Dusty answers from measured facts, on your Mac, with Apple Intelligence.</p><a class="link" href="dusty.html">Meet Dusty</a></div>
+    <img src="assets/shots/last-clean-light.webp" alt="A plain-words summary of the last clean" width="850" height="367" class="axis-pic wide shot tile panel" loading="lazy" decoding="async">
+  </div>
+  <div class="axis-row" data-rise>
+    <div class="axis-text"><h3>You choose what goes</h3><p>Switch off any category. Add any file or folder to Always kept and it is never cleaned.</p><a class="link" href="features.html">All features</a></div>
+    <img src="assets/shots/kept-light.webp" alt="The Always kept list in Settings" width="774" height="302" class="axis-pic mid shot tile" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<section class="section">
+  <div class="names">
+    <h2>It never touches </h2>
+    <ul>
+      <li>Documents, </li><li>Desktop, </li><li>Downloads, </li><li>Photos, </li><li>Music, </li><li>Mail, </li><li>Messages, </li><li>iCloud Drive, </li><li>keychains, </li><li>browser profiles, </li><li>system folders, </li><li>external drives, </li><li>or anything you keep.</li>
+    </ul>
+  </div>
+  <p class="measure" style="margin-top:32px"><a class="link" href="safety.html">How the refusals work</a></p>
+</section>
+
+<section class="section">
+  <h2 class="faq-head">The usual questions</h2>
+  <div class="faq-list">
+    <details><summary>Will it delete something I need?</summary><div class="answer"><p>It clears files your apps can make again, such as caches, plus logs and Trash past a set age. Your personal folders are refused outright. Cleaning is permanent, so read <a class="link" href="cleans.html">what it cleans</a> before you install.</p></div></details>
+    <details><summary>Can I undo a clean?</summary><div class="answer"><p>Only for app leftovers, which go to the Trash first. Everything else is deleted for good, with no confirmation.</p></div></details>
+    <details><summary>Does it need my password?</summary><div class="answer"><p>No. Lightly never asks for an admin password. Full Disk Access is optional and only lets it clean the Trash.</p></div></details>
+    <details><summary>Is it free?</summary><div class="answer"><p>Yes. Lightly is open source under the MIT license, with no account, no trial and no paid tier.</p></div></details>
+    <details><summary>Does anything leave my Mac?</summary><div class="answer"><p>No. The app has no network code and no analytics. Dusty runs on Apple Intelligence on the Mac itself.</p></div></details>
+    <details><summary>Why does macOS warn me when I open it?</summary><div class="answer"><p>This build is not notarized by Apple. Choose Open Anyway in Privacy &amp; Security. The <a class="link" href="download.html">download page</a> has the steps.</p></div></details>
+  </div>
+  <p class="faq-more"><a class="link" href="faq.html">All questions</a></p>
+</section>
+
+<section class="close field">
+  <h2>Press once.<br>Then never.</h2>
+  <div class="close-row">
+    <p>Free for macOS 27 on Apple Silicon. The first clean runs an hour after you open it.</p>
+    <div><a class="button" href="download.html">Download for Mac</a></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-top">
+    <p>Lightly is free and open source. If it saves you some space, you can <a href="https://www.buymeacoffee.com/jsonrls">buy me a coffee</a>.</p>
+    <a href="#main">Back to top</a>
+  </div>
+  <div>
+    <a class="footer-big" href="https://github.com/jsonrls/lightly"><span>github.com/<br>jsonrls/lightly</span></a>
+    <div class="footer-meta">
+      <ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="download.html">Download</a></li></ul>
+      <span>MIT licensed. No warranty.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
