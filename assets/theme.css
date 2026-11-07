@@ -66,9 +66,9 @@ h2 em, h1 em { font-style: normal; color: var(--blue); }
 .bar .mark img { border-radius: 8px; }
 
 /* Buy Me a Coffee's own script writes this button at 60px; size it to the header buttons. Its svg height is !important upstream. */
-.bmc .bmc-btn { height: 44px; min-width: 0; padding: 0 16px; border-radius: 999px; font-size: 22px; }
-.bmc .bmc-btn svg { height: 24px !important; }
-.bmc .bmc-btn-text { margin-left: 4px; }
+.bmc .bmc-btn { height: 44px; min-width: 0; padding: 0 18px; border-radius: 999px; font-size: 16px; font-weight: 600; }
+.bmc .bmc-btn svg { height: 22px !important; }
+.bmc .bmc-btn-text { margin-left: 6px; }
 @media (max-width: 640px) { .bmc { display: none; } }
 
 .hero { padding: clamp(28px, 5vw, 64px) var(--m) 0; text-align: center; }
