@@ -8,31 +8,36 @@
 <meta property="og:title" content="What it cleans | Lightly">
 <meta property="og:description" content="Exactly what Lightly removes from your Mac, where it lives, and how old it must be before it goes.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f6f8f8">
+<meta name="theme-color" content="#2f6bff">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/theme.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="sky">
 <header class="bar">
   <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
   <nav aria-label="Main"><ul><li><a href="features.html">Features</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
-  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
-  <a class="button" href="download.html">Download</a>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://www.buymeacoffee.com/jsonrls">Buy me a coffee</a></li></ul></details>
+  <div class="bmc"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jsonrls" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script></div>
+  <a class="button dark" href="download.html">Download</a>
 </header>
-<main id="main">
-<header class="page-head">
+<header class="page-head" id="main">
+  <p class="pill on-blue"><span class="dot"></span>What it cleans</p>
   <h1 class="line">What goes, <img src="assets/shots/slot-toggles.webp" alt="Switches for Trash and App leftovers" width="734" height="150" class="slot" fetchpriority="high" decoding="async"> and when.</h1>
   <p class="lead intro">Six categories, each with its own rule. Every one has a switch in Settings, so you can turn off any of them.</p>
 </header>
+</div>
+<main>
 
 <section class="section">
-  <h2>The six categories</h2>
+  <h2>The six <em>categories</em></h2>
   <table class="rules">
     <thead><tr><th scope="col">Category</th><th scope="col">Where</th><th scope="col">When it goes</th><th scope="col">How</th></tr></thead>
     <tbody>
@@ -48,7 +53,7 @@
 
 <section class="band field">
   <div class="ask-head">
-    <h2>How long things stay</h2>
+    <h2>How long <em>things stay</em></h2>
     <p class="lead quiet">Bars show the wait before each kind of file can go, on a 30-day scale.</p>
   </div>
   <ul class="clock">
@@ -64,7 +69,7 @@
 <section class="section">
   <div class="pair" data-rise>
     <div class="pair-text">
-      <h2>One clean, itemised</h2>
+      <h2>One clean, <em>itemised</em></h2>
       <p>Each run records bytes freed for every category. A typical hourly clean is small, because there is rarely much to clear. The weekly clean is the big one if you write code.</p>
       <p>How much you get back depends on your Mac and your apps. Lightly shows the real figure after each run.</p>
     </div>
@@ -75,7 +80,7 @@
 <section class="band tone">
   <div class="pair flip" data-rise>
     <div class="pair-text">
-      <h2>Switch off what you want</h2>
+      <h2>Switch off what <em>you want</em></h2>
       <p>Keep your Docker cache. Leave the Trash alone. Each category has its own switch, and each switch tells you the rule behind it.</p>
       <a class="link" href="safety.html">What it never touches</a>
     </div>
@@ -86,7 +91,7 @@
 <section class="section">
   <div class="pair" data-rise>
     <div class="pair-text">
-      <h2>Keep one folder for good</h2>
+      <h2>Keep one folder <em>for good</em></h2>
       <p>Add a file or folder to Always kept and every clean skips it, including anything inside it.</p>
     </div>
     <img src="assets/shots/kept-light.webp" alt="The Always kept list with two folders" width="774" height="302" class="pair-pic shot tile" loading="lazy" decoding="async">

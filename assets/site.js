@@ -46,7 +46,7 @@ globalThis.lightlyJudge = judge;
 if (typeof document !== 'undefined') {
   const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  document.querySelectorAll('.facts, .rules tbody, .faq-list, .faq-split, .big-list, .plate, .plate figcaption, .plate-pair, .warning, .steps, .close-row, .page-head .intro, .ask-try').forEach((el) => el.setAttribute('data-rise', ''));
+  document.querySelectorAll('.facts, .rules tbody, .faq-list, .faq-split, .big-list, .plate, .plate figcaption, .plate-pair, .warning, .steps, .page-head .intro, .ask-try, .ask-wrap, .show, .feature-chips').forEach((el) => el.setAttribute('data-rise', ''));
   for (const box of document.querySelectorAll('[data-rise]')) {
     [...box.children].forEach((child, i) => child.style.setProperty('--i', Math.min(i, 6)));
   }
@@ -57,7 +57,7 @@ if (typeof document !== 'undefined') {
       seen.unobserve(entry.target);
     }
   }, { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('[data-rise], .shutter, .clock').forEach((el) => seen.observe(el));
+  document.querySelectorAll('[data-rise], .clock').forEach((el) => seen.observe(el));
 
   for (const form of document.querySelectorAll('[data-ask]')) {
     const input = form.querySelector('input');
@@ -76,28 +76,36 @@ if (typeof document !== 'undefined') {
     show();
   }
 
-  const press = document.querySelector('.press');
-  if (press) {
-    const note = document.querySelector('.press-note');
-    press.addEventListener('click', () => {
-      press.classList.add('spent');
-      note.textContent = 'Nothing happened. Lightly already cleaned this hour, by itself.';
-    });
+  const steps = document.querySelector('[data-steps]');
+  if (steps) {
+    const view = steps.querySelector('.steps-view');
+    const track = steps.querySelector('.steps-track');
+    const cards = [...track.children];
+    const tabs = [...steps.querySelectorAll('.seg button')];
+    let at = 0;
+    const show = (i) => {
+      at = i;
+      cards.forEach((card, n) => card.classList.toggle('on', n === i));
+      tabs.forEach((tab, n) => tab.setAttribute('aria-pressed', String(n === i)));
+      const card = cards[i];
+      // Wide screens show every card in a row; only slide when the row is wider than the view.
+      const slides = track.offsetWidth > view.clientWidth;
+      track.style.transform = slides ? `translateX(${view.clientWidth / 2 - card.offsetLeft - card.offsetWidth / 2}px)` : '';
+    };
+    tabs.forEach((tab, i) => tab.addEventListener('click', () => show(i)));
+    cards.forEach((card, i) => card.addEventListener('click', (event) => { if (!event.target.closest('a')) show(i); }));
+    addEventListener('resize', () => show(at));
+    show(0);
   }
 
-  const slider = document.querySelector('.stages input[type="range"]');
-  if (slider) {
-    const parts = [...document.querySelectorAll('[data-stage]')];
-    const names = [...document.querySelectorAll('.stage-names li')];
-    const show = () => {
-      const stop = slider.value;
-      for (const part of parts) part.classList.toggle('on', part.dataset.stage === stop);
-      names.forEach((name, i) => name.classList.toggle('on', String(i) === stop));
-      slider.parentElement.style.setProperty('--done', stop / slider.max);
-      slider.setAttribute('aria-valuetext', names[stop].textContent);
-    };
-    slider.addEventListener('input', show);
-    show();
+  const marquee = document.querySelector('.marquee-track');
+  if (marquee && !calm) {
+    for (const item of [...marquee.children]) {
+      const copy = item.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      marquee.append(copy);
+    }
+    marquee.classList.add('run');
   }
 
   const names = [...document.querySelectorAll('.names li')];

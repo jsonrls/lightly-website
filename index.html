@@ -8,114 +8,245 @@
 <meta property="og:title" content="Lightly: the Mac cleaner with nothing to press">
 <meta property="og:description" content="Lightly is a free, open source Mac menu bar app that clears caches, logs and old Trash by itself, every hour.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f6f8f8">
+<meta name="theme-color" content="#2f6bff">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/theme.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Skip to content</a>
+<div class="sky">
 <header class="bar">
   <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
   <nav aria-label="Main"><ul><li><a href="features.html">Features</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
-  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
-  <a class="button" href="download.html">Download</a>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://www.buymeacoffee.com/jsonrls">Buy me a coffee</a></li></ul></details>
+  <div class="bmc"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jsonrls" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script></div>
+  <a class="button dark" href="download.html">Download</a>
 </header>
-<main id="main">
-<section class="hero">
-  <h1 class="line">Nothing to <button class="press" type="button" aria-label="press"><img src="assets/shots/clean-now.webp" alt="" width="1079" height="302" fetchpriority="high" decoding="async"></button></h1>
-  <div class="hero-row">
-    <p>Lightly is a free Mac menu bar app that clears caches, logs and old Trash by itself, every hour.</p>
-    <div class="hero-act"><a class="link" href="cleans.html">What it cleans</a><a class="button" href="download.html">Download for Mac</a></div>
-    <p class="press-note quiet" role="status"></p>
+<section class="hero" id="main">
+  <p class="pill on-blue"><span class="dot"></span>Free and open source for macOS 27</p>
+  <h1>Your Mac cleans itself, with <span class="inline-mark"><img src="assets/icon.svg" alt="" width="48" height="48"></span>Lightly</h1>
+  <p class="hero-sub">A menu bar app that clears caches, logs and old Trash every hour. Nothing to press, nothing to confirm.</p>
+  <div class="cta-bar">
+    <span>Apple Silicon · No account · MIT licensed</span>
+    <a class="button dark" href="download.html"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M10 3v9m0 0-4-4m4 4 4-4M4 16h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download for Mac</a>
   </div>
-</section>
-<figure class="stage">
-  <div class="stage-bar" data-ui><span class="stage-icon"><img src="assets/menubar.svg" alt="Lightly in the menu bar" width="19" height="19"></span><span>Sat 2:04 PM</span></div>
-  <div class="stage-shots shutter">
-    <img src="assets/shots/full-dark.webp" alt="Lightly's full view with rings for disk, memory, CPU and battery, the last clean by category, the cleaning history and Dusty" width="1992" height="1284" class="stage-full" fetchpriority="high" decoding="async">
-    <img src="assets/shots/popover-dark.webp" alt="Lightly's menu bar window, showing 412.7 GB free and a last clean of 6.72 GB" width="792" height="1144" class="stage-pop" fetchpriority="high" decoding="async">
-  </div>
-</figure>
 
-<section class="section" aria-labelledby="ask-title">
-  <div class="ask-head" data-rise>
-    <h2 id="ask-title">Would Lightly touch it?</h2>
-    <p class="lead">Type any path from your Mac. The answer uses the same rules the app runs on.</p>
-  </div>
-  <form class="ask" data-ask>
-    <label class="sr" for="ask-path">A path on your Mac</label>
-    <input class="ask-input" id="ask-path" data-ui value="~/Documents/taxes-2026.pdf" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
-    <div class="ask-answer" aria-live="polite">
-      <p class="ask-word">Never.</p>
-      <p class="ask-why">That is inside Documents, which is on the list Lightly refuses, whatever else happens.</p>
+  <div class="deck" role="img" aria-label="Lightly's menu bar window: 412.7 GB free, last clean today at 2:00 PM freed 6.72 GB, 27.22 GB freed this month in 150 cleans">
+    <div class="deck-col">
+      <div class="card ui slim" data-ui>
+        <span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 6v4l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span><small>Next clean</small>3:00 PM</span>
+        <span class="tag ok">Auto</span>
+      </div>
+      <div class="card ui" data-ui>
+        <p class="ui-row"><span><small>Last clean</small>Today, 2:00 PM</span><b class="num">6.72 GB</b></p>
+        <ul class="ui-list">
+          <li><span>Developer caches</span><b class="num">3.84 GB</b></li>
+          <li><span>Trash (30+ days)</span><b class="num">1.24 GB</b></li>
+          <li><span>Docker build cache</span><b class="num">1.12 GB</b></li>
+        </ul>
+      </div>
     </div>
-    <div class="ask-try">
-      <button class="chip" type="button">~/Library/Caches/com.spotify.client</button>
-      <button class="chip" type="button">~/Library/Logs/Zoom/zoom.log</button>
-      <button class="chip" type="button">~/.Trash/old-invoice.pdf</button>
-      <button class="chip" type="button">/Volumes/Backup/Photos</button>
+    <div class="card ui tall" data-ui>
+      <p class="ui-head"><span class="glyph solid"><img src="assets/menubar.svg" alt="" width="14" height="14"></span><span><small>Disk</small>Macintosh HD</span></p>
+      <p class="ui-big num">412.7 GB <small>free of 994.66 GB</small></p>
+      <span class="meter" style="--v:59%"></span>
+      <div class="rings">
+        <span class="ring" style="--v:52"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" pathLength="100"/><circle cx="18" cy="18" r="15" pathLength="100"/></svg><b class="num">52%</b><small>Memory</small></span>
+        <span class="ring" style="--v:12"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" pathLength="100"/><circle cx="18" cy="18" r="15" pathLength="100"/></svg><b class="num">12%</b><small>CPU</small></span>
+        <span class="ring" style="--v:86"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" pathLength="100"/><circle cx="18" cy="18" r="15" pathLength="100"/></svg><b class="num">86%</b><small>Battery</small></span>
+      </div>
     </div>
-  </form>
-</section>
-
-<section class="stages" aria-label="What happens in a clean">
-  <div class="stages-text">
-    <div class="stage-copy">
-      <div class="stage-text" data-stage="0"><h2>First, it waits a&nbsp;full hour.</h2><p>Nothing is cleaned at launch. The first clean comes one interval after you open Lightly, so you have time to set it up.</p></div>
-      <div class="stage-text" data-stage="1"><h2>Then it checks what it may clear.</h2><p>Each file goes through one gateway. Open apps, recent files and anything on your own keep list are left alone.</p></div>
-      <div class="stage-text" data-stage="2"><h2>It clears the rest on its own.</h2><p>Caches, old logs, old Trash and whatever deleted apps left behind. No window opens and nothing asks you to confirm.</p></div>
-      <div class="stage-text" data-stage="3"><h2>Then it writes it all down.</h2><p>Every clean is kept by date and size, so you can read what happened whenever you are curious.</p></div>
+    <div class="deck-col">
+      <div class="card ui slim" data-ui>
+        <span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10.5 8 14l8-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><small>Cleaned by itself</small>Nothing asked</span>
+      </div>
+      <div class="card ui" data-ui>
+        <p class="ui-center"><small>This month</small><b class="num">27.22 GB</b></p>
+        <div class="split">
+          <p><small>Cleans</small><b class="num">150</b></p>
+          <p><small>Mostly</small><b>App caches</b></p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="stages-pics">
-    <img src="assets/shots/schedule-dark.webp" alt="Auto-clean settings, set to clean every hour" width="774" height="190" class="stage-pic shot" data-stage="0" loading="lazy" decoding="async">
-    <img src="assets/shots/categories-dark.webp" alt="The six cleaning categories, each with its own switch" width="774" height="560" class="stage-pic shot" data-stage="1" loading="lazy" decoding="async">
-    <img src="assets/shots/last-clean-dark.webp" alt="The last clean, 6.72 GB, split into six categories" width="850" height="367" class="stage-pic shot panel" data-stage="2" loading="lazy" decoding="async">
-    <img src="assets/shots/history-dark.webp" alt="The cleaning history, one row for each hourly clean" width="849" height="367" class="stage-pic shot panel" data-stage="3" loading="lazy" decoding="async">
-  </div>
-  <div class="stages-control">
-    <div class="range"><label class="sr" for="stage-range">Stage of a clean</label><input id="stage-range" type="range" min="0" max="3" step="1" value="0"></div>
-    <ol class="stage-names"><li>Waits</li><li>Checks</li><li>Clears</li><li>Records</li></ol>
-  </div>
 </section>
+</div>
 
-<section class="section">
-  <div class="axis-head" data-rise><h2>It stays out of sight.</h2></div>
-  <div class="axis-row" data-rise>
-    <div class="axis-text"><h3>No Dock icon, no main window</h3><p>A small white ring in the menu bar is all you see. It opens at login, then runs in the background.</p></div>
-    <img src="assets/shots/gauges-light.webp" alt="Disk, memory, CPU and battery rings in the menu bar window" width="582" height="395" class="axis-pic mid shot tile" loading="lazy" decoding="async">
-  </div>
-  <div class="axis-row" data-rise>
-    <div class="axis-text"><h3>Catches up after sleep</h3><p>If your Mac was asleep on the hour, the clean runs at the next wake. Pause it any time from Settings.</p></div>
-    <img src="assets/shots/schedule-light.webp" alt="Clean automatically switch and interval picker" width="774" height="190" class="axis-pic wide shot tile" loading="lazy" decoding="async">
-  </div>
-  <div class="axis-row" data-rise>
-    <div class="axis-text"><h3>Dusty explains the rest</h3><p>Ask what is using your disk. Dusty answers from measured facts, on your Mac, with Apple Intelligence.</p><a class="link" href="dusty.html">Meet Dusty</a></div>
-    <img src="assets/shots/last-clean-light.webp" alt="A plain-words summary of the last clean" width="850" height="367" class="axis-pic wide shot tile panel" loading="lazy" decoding="async">
-  </div>
-  <div class="axis-row" data-rise>
-    <div class="axis-text"><h3>You choose what goes</h3><p>Switch off any category. Add any file or folder to Always kept and it is never cleaned.</p><a class="link" href="features.html">All features</a></div>
-    <img src="assets/shots/kept-light.webp" alt="The Always kept list in Settings" width="774" height="302" class="axis-pic mid shot tile" loading="lazy" decoding="async">
-  </div>
-</section>
-
-<section class="section">
-  <div class="names">
-    <h2>It never touches </h2>
-    <ul>
-      <li>Documents, </li><li>Desktop, </li><li>Downloads, </li><li>Photos, </li><li>Music, </li><li>Mail, </li><li>Messages, </li><li>iCloud Drive, </li><li>keychains, </li><li>browser profiles, </li><li>system folders, </li><li>external drives, </li><li>or anything you keep.</li>
+<main class="body">
+<section class="strip" aria-labelledby="strip-title">
+  <h2 id="strip-title">Six kinds of clutter, cleared <em>every hour</em></h2>
+  <div class="marquee">
+    <ul class="marquee-track">
+      <li><span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><rect x="3" y="4" width="14" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>App caches <b class="num">412.6 MB</b></li>
+      <li><span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M5 5h10M5 10h10M5 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>Logs <b class="num">18.4 MB</b></li>
+      <li><span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 6h12M8 6V4h4v2M6 6l1 10h6l1-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>Trash (30+ days) <b class="num">1.24 GB</b></li>
+      <li><span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><rect x="4" y="4" width="12" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/></svg></span>App leftovers <b class="num">86.1 MB</b></li>
+      <li><span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="m7 6-4 4 4 4m6-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Developer caches <b class="num">3.84 GB</b></li>
+      <li><span class="glyph"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M3 11h14l-1 4H4zM5 11V8h3v3m0-3V5h3v6m0-3h3v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>Docker build cache <b class="num">1.12 GB</b></li>
     </ul>
   </div>
-  <p class="measure" style="margin-top:32px"><a class="link" href="safety.html">How the refusals work</a></p>
+  <p class="strip-note">Sizes from one real clean. <a class="link" href="cleans.html">What it cleans</a></p>
 </section>
 
-<section class="section">
-  <h2 class="faq-head">The usual questions</h2>
+<section class="steps-sec lined" aria-labelledby="steps-title" data-steps>
+  <div class="center-head" data-rise>
+    <p class="pill"><span class="dot"></span>How a clean runs</p>
+    <h2 id="steps-title">Set it up once. It runs <em>on its own</em></h2>
+  </div>
+  <div class="seg" role="group" aria-label="Stage of a clean">
+    <button type="button" aria-pressed="true">Waits</button>
+    <button type="button" aria-pressed="false">Checks</button>
+    <button type="button" aria-pressed="false">Clears</button>
+    <button type="button" aria-pressed="false">Records</button>
+  </div>
+  <div class="steps-view">
+    <ol class="steps-track">
+      <li class="step-card">
+        <span class="glyph big"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 6v4l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <h3>It waits a full hour</h3>
+        <p>Nothing is cleaned at launch. The first clean comes one interval after you open Lightly, so you have time to set it up.</p>
+        <p class="step-foot"><span class="tag">Every 60 min</span><a class="link" href="features.html">Schedule</a></p>
+      </li>
+      <li class="step-card">
+        <span class="glyph big"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M10 2.5 16 5v5c0 3.6-2.6 6.4-6 7.5-3.4-1.1-6-3.9-6-7.5V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <h3>It checks each file</h3>
+        <p>Every file goes through one gateway. Open apps, recent files and anything on your keep list are left alone.</p>
+        <p class="step-foot"><span class="tag">One gateway</span><a class="link" href="safety.html">Safety</a></p>
+      </li>
+      <li class="step-card">
+        <span class="glyph big"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 6h12M8 6V4h4v2M6 6l1 10h6l1-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <h3>It clears the rest</h3>
+        <p>Caches, old logs, old Trash and what deleted apps left behind. No window opens and nothing asks you to confirm.</p>
+        <p class="step-foot"><span class="tag num">6.72 GB last time</span><a class="link" href="cleans.html">What it cleans</a></p>
+      </li>
+      <li class="step-card">
+        <span class="glyph big"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 5h10M5 10h10M5 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <h3>It writes it down</h3>
+        <p>Every clean is kept by date and size, so you can read what happened whenever you are curious.</p>
+        <p class="step-foot"><span class="tag num">150 cleans this month</span><a class="link" href="screenshots.html">See it</a></p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="ask-sec lined" aria-labelledby="ask-title">
+  <div class="center-head" data-rise>
+    <p class="pill"><span class="dot"></span>Try it</p>
+    <h2 id="ask-title">Would Lightly <em>touch it?</em></h2>
+    <p class="sub">Type any path from your Mac. The answer uses the same rules the app runs on.</p>
+  </div>
+  <div class="ask-wrap">
+    <div class="wires" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <form class="ask card" data-ask>
+      <div class="ask-top">
+        <span class="glyph big solid"><img src="assets/menubar.svg" alt="" width="18" height="18"></span>
+        <p><b>Ask about a path</b><small>Same rules as the app</small></p>
+        <span class="tag ok">Live</span>
+      </div>
+      <label class="field-label" for="ask-path">A path on your Mac</label>
+      <input class="ask-input" id="ask-path" value="~/Documents/taxes-2026.pdf" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off">
+      <div class="ask-try">
+        <button class="chip" type="button">~/Library/Caches/com.spotify.client</button>
+        <button class="chip" type="button">~/Library/Logs/Zoom/zoom.log</button>
+        <button class="chip" type="button">~/.Trash/old-invoice.pdf</button>
+        <button class="chip" type="button">/Volumes/Backup/Photos</button>
+      </div>
+      <div class="ask-answer" aria-live="polite">
+        <p class="ask-word">Never.</p>
+        <p class="ask-why">That is inside Documents, which is on the list Lightly refuses, whatever else happens.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="safe-sec" aria-labelledby="safe-title">
+  <div class="center-head" data-rise>
+    <p class="pill"><span class="dot"></span>Safety</p>
+    <h2 id="safe-title">Your own files stay <em>off limits</em></h2>
+    <p class="sub">These are refused outright, before any other rule runs. No admin password, no system folders, no external drives.</p>
+  </div>
+  <div class="hub">
+    <ul class="hub-side left">
+      <li><span class="node">Documents <span class="tag no">Never</span></span></li>
+      <li><span class="node">Desktop <span class="tag no">Never</span></span></li>
+      <li><span class="node">Photos <span class="tag no">Never</span></span></li>
+      <li><span class="node">Mail <span class="tag no">Never</span></span></li>
+    </ul>
+    <div class="card hub-card" data-ui>
+      <p class="ui-head"><span class="glyph solid"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M10 2.5 16 5v5c0 3.6-2.6 6.4-6 7.5-3.4-1.1-6-3.9-6-7.5V5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><small>Before anything goes</small>The gateway</span></p>
+      <ul class="ui-list">
+        <li><span>App is open</span><b>Skipped</b></li>
+        <li><span>Used lately</span><b>Skipped</b></li>
+        <li><span>On your keep list</span><b>Skipped</b></li>
+      </ul>
+      <div class="split">
+        <p><small>Leftovers go to</small><b>Trash first</b></p>
+        <p><small>Leaves your Mac</small><b>Nothing</b></p>
+      </div>
+    </div>
+    <ul class="hub-side right">
+      <li><span class="node">Messages <span class="tag no">Never</span></span></li>
+      <li><span class="node">iCloud Drive <span class="tag no">Never</span></span></li>
+      <li><span class="node">Keychains <span class="tag no">Never</span></span></li>
+      <li><span class="node">Browser profiles <span class="tag no">Never</span></span></li>
+    </ul>
+  </div>
+  <p class="center-link"><a class="link" href="safety.html">How the refusals work</a></p>
+</section>
+
+<section class="dusty-sec" aria-labelledby="dusty-title">
+  <div class="dusty-text" data-rise>
+    <p class="pill"><span class="dot"></span>Dusty</p>
+    <h2 id="dusty-title">Ask what fills <em>your disk</em></h2>
+    <p>Dusty gives a plain answer from measured facts, on your Mac, with Apple Intelligence. Nothing is sent anywhere.</p>
+    <p><a class="link" href="dusty.html">Meet Dusty</a></p>
+  </div>
+  <div class="dusty-pics">
+    <div class="card chat" data-ui>
+      <p class="ui-head"><span class="glyph solid"><img src="assets/menubar.svg" alt="" width="14" height="14"></span><span><small>Assistant</small>Dusty</span></p>
+      <p class="bubble me">What's using my disk?</p>
+      <p class="bubble">Applications use the most, at 96.4 GB. App data is next at 71.2 GB, then Developer tools at 38.9 GB.</p>
+      <p class="bubble me">What's the second one?</p>
+      <p class="bubble">App data, at 71.2 GB. It is where your apps keep their own files, such as libraries and saved projects.</p>
+    </div>
+    <div class="card toast" data-ui>
+      <span class="glyph solid"><svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M4 10.5 8 14l8-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <p>Cleaned 6.72 GB <small>Today, 2:00 PM</small></p>
+    </div>
+  </div>
+  <ul class="feature-chips">
+    <li><span class="glyph solid"><img src="assets/menubar.svg" alt="" width="12" height="12"></span>No Dock icon</li>
+    <li><span class="glyph solid"><svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true"><path d="M15 12a6 6 0 1 1-7-8 5 5 0 0 0 7 8z" fill="currentColor"/></svg></span>Catches up after sleep</li>
+    <li><span class="glyph solid"><svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true"><path d="M7 4v12M13 4v12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>Pause any time</li>
+    <li><span class="glyph solid"><svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="2" fill="currentColor"/><path d="M7 9V7a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>Nothing leaves your Mac</li>
+  </ul>
+</section>
+
+<section class="show-sec" aria-labelledby="show-title">
+  <div class="center-head" data-rise>
+    <p class="pill"><span class="dot"></span>Full view</p>
+    <h2 id="show-title">Everything on <em>one screen</em></h2>
+    <p class="sub">Disk, memory, CPU and battery, the last clean, the history and Dusty. Open it from the menu bar when you are curious.</p>
+  </div>
+  <figure class="show">
+    <img src="assets/shots/full-light.webp" alt="Lightly's full view with rings for disk, memory, CPU and battery, the last clean by category, the cleaning history and Dusty" width="1992" height="1284" loading="lazy" decoding="async">
+  </figure>
+</section>
+
+<section class="faq-sec" aria-labelledby="faq-title">
+  <div class="faq-side" data-rise>
+    <p class="pill"><span class="dot"></span>Questions</p>
+    <h2 id="faq-title">The usual <em>questions</em></h2>
+    <p><a class="link" href="faq.html">All questions</a></p>
+  </div>
   <div class="faq-list">
     <details><summary>Will it delete something I need?</summary><div class="answer"><p>It clears files your apps can make again, such as caches, plus logs and Trash past a set age. Your personal folders are refused outright. Cleaning is permanent, so read <a class="link" href="cleans.html">what it cleans</a> before you install.</p></div></details>
     <details><summary>Can I undo a clean?</summary><div class="answer"><p>Only for app leftovers, which go to the Trash first. Everything else is deleted for good, with no confirmation.</p></div></details>
@@ -124,17 +255,15 @@
     <details><summary>Does anything leave my Mac?</summary><div class="answer"><p>No. The app has no network code and no analytics. Dusty runs on Apple Intelligence on the Mac itself.</p></div></details>
     <details><summary>Why does macOS warn me when I open it?</summary><div class="answer"><p>This build is not notarized by Apple. Choose Open Anyway in Privacy &amp; Security. The <a class="link" href="download.html">download page</a> has the steps.</p></div></details>
   </div>
-  <p class="faq-more"><a class="link" href="faq.html">All questions</a></p>
 </section>
 
-<section class="close field">
-  <h2>Press once.<br>Then never.</h2>
-  <div class="close-row">
-    <p>Free for macOS 27 on Apple Silicon. The first clean runs an hour after you open it.</p>
-    <div><a class="button" href="download.html">Download for Mac</a></div>
-  </div>
+<section class="close-sky" aria-labelledby="close-title">
+  <h2 id="close-title">Press once. Then <em>never</em>.</h2>
+  <p>Free for macOS 27 on Apple Silicon. The first clean runs an hour after you open it.</p>
+  <div class="close-act"><a class="button light" href="download.html">Download for Mac</a><a class="link" href="https://github.com/jsonrls/lightly">Source on GitHub</a></div>
 </section>
 </main>
+
 <footer class="footer">
   <div class="footer-top">
     <p>Lightly is free and open source. If it saves you some space, you can <a href="https://www.buymeacoffee.com/jsonrls">buy me a coffee</a>.</p>

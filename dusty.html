@@ -8,35 +8,40 @@
 <meta property="og:title" content="Dusty | Lightly">
 <meta property="og:description" content="Dusty is Lightly&#x27;s on-device assistant. It explains each clean and answers questions about your Mac, with Apple Intelligence.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f6f8f8">
+<meta name="theme-color" content="#2f6bff">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/theme.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="sky">
 <header class="bar">
   <a class="mark" href="index.html"><img src="assets/icon.svg" alt="" width="30" height="30">Lightly</a>
   <nav aria-label="Main"><ul><li><a href="features.html">Features</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html" aria-current="page">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></nav>
-  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li></ul></details>
-  <a class="button" href="download.html">Download</a>
+  <details class="menu"><summary>Menu</summary><ul><li><a href="features.html">Features</a></li><li><a href="cleans.html">What it cleans</a></li><li><a href="safety.html">Safety</a></li><li><a href="dusty.html">Dusty</a></li><li><a href="screenshots.html">Screenshots</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://www.buymeacoffee.com/jsonrls">Buy me a coffee</a></li></ul></details>
+  <div class="bmc"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jsonrls" data-color="#FFDD00" data-emoji="☕"  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script></div>
+  <a class="button dark" href="download.html">Download</a>
 </header>
-<main id="main">
-<header class="page-head">
+<header class="page-head" id="main">
+  <p class="pill on-blue"><span class="dot"></span>Dusty</p>
   <h1 class="line">Ask <img src="assets/shots/slot-ask.webp" alt="A question bubble that reads What's using my disk?" width="420" height="100" class="slot" fetchpriority="high" decoding="async"> Dusty.</h1>
   <p class="lead intro">Dusty is the assistant in Lightly’s full view. It tells you what is on your Mac in plain words, and it runs on your Mac.</p>
 </header>
+</div>
+<main>
 
 <figure class="band field" style="margin-top:clamp(48px,6vw,88px)">
   <img src="assets/shots/chat-dark.webp" alt="Lightly's full view with a two-question chat with Dusty about disk use" width="1992" height="1536" class="full-shot" style="max-width:1200px" loading="lazy" decoding="async">
 </figure>
 
 <section class="section">
-  <h2>What you can ask</h2>
+  <h2>What you <em>can ask</em></h2>
   <ol class="facts big-list">
     <li><h3>“What’s using my disk?”</h3><p>Dusty answers from measured folder sizes, largest first.</p></li>
     <li><h3>“What’s the second one?”</h3><p>Follow-ups work. It remembers your last 4 exchanges.</p></li>
@@ -48,7 +53,7 @@
 <section class="band field">
   <div class="pair" data-rise>
     <div class="pair-text">
-      <h2>It only rewords facts</h2>
+      <h2>It only <em>rewords facts</em></h2>
       <p>Dusty has no tools. It is handed measured numbers and can only put them into words. It cannot decide what gets deleted, and it never tells you to remove anything.</p>
       <p>Answers are checked against those numbers. One that fails the check is replaced by the numbers themselves.</p>
     </div>
@@ -67,7 +72,7 @@
 <section class="section">
   <div class="pair flip" data-rise>
     <div class="pair-text">
-      <h2>Press Scan</h2>
+      <h2><em>Press Scan</em></h2>
       <p>Scan finds the biggest items on your Mac and tells you what each one probably is. It only reads. Nothing is removed.</p>
     </div>
     <img src="assets/shots/ask-box-light.webp" alt="The Dusty panel with its Scan button and question box" width="1732" height="160" class="pair-pic shot tile panel-wide" loading="lazy" decoding="async">
@@ -77,7 +82,7 @@
 <section class="section">
   <div class="pair" data-rise>
     <div class="pair-text">
-      <h2>Every clean, in plain words</h2>
+      <h2>Every clean, in <em>plain words</em></h2>
       <p>After each run, Dusty writes one line about it, such as “Freed 6.72 GB, mostly from Developer caches.” If a folder could not be cleared, it says that too.</p>
     </div>
     <img src="assets/shots/last-clean-light.webp" alt="A one-line summary above the category rows" width="850" height="367" class="pair-pic shot tile panel" loading="lazy" decoding="async">
@@ -87,7 +92,7 @@
 <section class="band tone">
   <div class="pair flip" data-rise>
     <div class="pair-text">
-      <h2>No Apple Intelligence?</h2>
+      <h2>No <em>Apple Intelligence?</em></h2>
       <p>Dusty needs a Mac that supports it. Everything else in Lightly works without it. The panel is simply not shown.</p>
       <a class="link" href="download.html">Requirements</a>
     </div>
